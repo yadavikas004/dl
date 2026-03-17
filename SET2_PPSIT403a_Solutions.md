@@ -9,7 +9,8 @@ This document provides detailed model answers for the PPSIT403a Question Paper (
 ### **a: Explain Identity and Inverse matrix with an example.**
 *   **Identity Matrix ($\mathbf{I}$):** A square matrix with 1s on the main diagonal and 0s elsewhere. It is the multiplicative identity in matrix algebra. $\mathbf{A} \cdot \mathbf{I} = \mathbf{A}$.
 *   **Inverse Matrix ($\mathbf{A}^{-1}$):** A matrix such that $\mathbf{A} \cdot \mathbf{A}^{-1} = \mathbf{I}$. Only exists if $\mathbf{A}$ is square and $|A| \neq 0$.
-*   **Example:** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $|A| = -2$. $\mathbf{A}^{-1} = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}$.
+*   **Example:** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $|A| = -2$.
+    $$ \mathbf{A}^{-1} = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix} $$
 
 ### **b: Write a short note on Norms.**
 *   **Definition:** A function that measures the magnitude/length of a vector.

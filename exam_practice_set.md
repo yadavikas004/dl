@@ -22,8 +22,10 @@ Convolution is a sliding product sum (assume Valid padding):
 
 ### Q: Demonstrate the calculation of an Inverse Matrix for $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$.
 *   **Determinant ($|A|$):** $(1 \times 4) - (2 \times 3) = 4 - 6 = -2$.
-*   **Adjoint ($adj A$):** Swap diagonal elements, negate others $\rightarrow \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix}$.
-*   **Inverse ($A^{-1}$):** $\frac{1}{|A|} adj A = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}$.
+*   **Adjoint ($adj A$):**
+    $$ adj A = \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} $$
+*   **Inverse ($A^{-1}$):**
+    $$ A^{-1} = \frac{1}{|A|} adj A = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix} $$
 
 ---
 
