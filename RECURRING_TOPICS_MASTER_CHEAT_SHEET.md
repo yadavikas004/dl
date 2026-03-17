@@ -45,7 +45,7 @@ I have analyzed all four question papers and identified these "Master Topics" th
     *   **Calculation Steps:**
         1. **Determinant ($|A|$):** For $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $|A| = (1 \times 4) - (2 \times 3) = -2$.
         2. **Adjoint ($adj A$):** Swap diagonals, negate others $\rightarrow \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix}$.
-        3. **Final Result:** $A^{-1} = \frac{1}{|A|} adj A = \mathbf{\begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}}$.
+        3. **Final Result:** $A^{-1} = \frac{1}{|A|} adj A = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}$.
 *   **Identity Matrix ($\mathbf{I}$):** Square matrix with 1s on diagonal, 0s elsewhere. Act as "1" in matrix math.
 *   **Norms:** $L^1$ (absolute sum) and $L^2$ (root of square sum).
 *   **Condition Number:** Measure of numerical stability ($|\lambda_{max}| / |\lambda_{min}|$). High number = Poor conditioning.
