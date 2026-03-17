@@ -20,12 +20,13 @@ Convolution is a sliding product sum (assume Valid padding):
 *   **$L^1$ Norm (Manhattan):** $\|x\|_1 = |3| + |-4| = 3 + 4 = \mathbf{7}$
 *   **$L^2$ Norm (Euclidean):** $\|x\|_2 = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = \mathbf{5}$
 
-### Q: Demonstrate the calculation of an Inverse Matrix for $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$.
+### Q: Demonstrate the calculation of an Inverse Matrix for A:
+$$ A = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix} $$
 *   **Determinant ($|A|$):** $(1 \times 4) - (2 \times 3) = 4 - 6 = -2$.
 *   **Adjoint ($adj A$):**
-    $$ adj A = \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} $$
+    $$ adj A = \begin{bmatrix} 4 & -2 \\\\ -3 & 1 \end{bmatrix} $$
 *   **Inverse ($A^{-1}$):**
-    $$ A^{-1} = \frac{1}{|A|} adj A = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix} $$
+    $$ A^{-1} = \frac{1}{|A|} adj A = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\\\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\\\ 1.5 & -0.5 \end{bmatrix} $$
 
 ---
 
