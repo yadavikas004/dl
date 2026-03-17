@@ -51,7 +51,13 @@ I have analyzed all four question papers and identified these "Master Topics" th
 *   **Eigen-decomposition:** Factoring square matrices into $\mathbf{Av} = \lambda\mathbf{v}$. Used in PCA.
 *   **Inverse Matrix ($\mathbf{A}^{-1}$):** Only exists if $|A| \neq 0$. Defined such that $\mathbf{AA}^{-1} = \mathbf{I}$.
     *   **Calculation Steps:**
-        1. **Determinant ($|A|$):** For $A = \begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}$, $|A| = -2$.
+        1. **Determinant ($|A|$):** For 
+
+$$
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+$$
+
+, $|A| = -2$.
         2. **Adjoint ($adj A$):** 
            $$ adj A = \begin{bmatrix} 4 & -2 \\\\ -3 & 1 \end{bmatrix} $$
         3. **Final Result:** 

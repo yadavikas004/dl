@@ -7,7 +7,7 @@ University examiners love comparison questions because they are easy to grade. *
 ### **1. Optimization: L1 Regularization vs. L2 Regularization**
 | Feature | L1 (Lasso) | L2 (Ridge) |
 | :--- | :--- | :--- |
-| **Penalty Term** | $\lambda \sum |w_i|$ (Absolute) | $\lambda \sum w_i^2$ (Squared) |
+| **Penalty Term** | $\lambda \sum \vert w_i \vert$ (Absolute) | $\lambda \sum w_i^2$ (Squared) |
 | **Geometry** | Diamond / Rhombus | Circular / Spherical |
 | **Resulting Weights** | Exact zeros (**Sparsity**) | Small but non-zero values |
 | **Use Case** | Feature selection; interpretable models | Preventing large weights; general stability |

@@ -21,8 +21,24 @@ This document covers the fourth and final question paper (QP4). It uses high-det
 *   **Concept:** Multiplying a matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$ by a vector $\mathbf{x} \in \mathbb{R}^n$ results in a new vector $\mathbf{y} \in \mathbb{R}^m$.
 *   **Operation:** The $i^{th}$ element of $\mathbf{y}$ is the dot product of the $i^{th}$ row of $\mathbf{A}$ with the vector $\mathbf{x}$.
 *   **Example:**
-    Let $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{x} = \begin{bmatrix} 5 \\ 6 \end{bmatrix}$.
-    $\mathbf{y} = \mathbf{A}\mathbf{x} = \begin{bmatrix} (1 \times 5) + (2 \times 6) \\ (3 \times 5) + (4 \times 6) \end{bmatrix} = \begin{bmatrix} 17 \\ 39 \end{bmatrix}$.
+    Let 
+
+$$
+\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+$$
+
+ and 
+
+$$
+\mathbf{x} = \begin{bmatrix} 5 \\ 6 \end{bmatrix}
+
+$$ .
+    
+
+$$
+\mathbf{y} = \mathbf{A}\mathbf{x} = \begin{bmatrix} (1 \times 5) + (2 \times 6) \\ (3 \times 5) + (4 \times 6) \end{bmatrix} = \begin{bmatrix} 17 \\ 39 \end{bmatrix}
+
+$$ .
 *   **Significance:** In Deep Learning, every layer transformation is essentially $\mathbf{y} = \sigma(\mathbf{W}\mathbf{x} + \mathbf{b})$.
 
 ### **c. Compare Overflow and Underflow.**

@@ -42,7 +42,13 @@ Divide the matrix into 2x2 blocks:
 2.  Top-Right: $\max(30, 0, 2, 0) = \mathbf{30}$
 3.  Bottom-Left: $\max(34, 70, 112, 100) = \mathbf{112}$
 4.  Bottom-Right: $\max(37, 4, 25, 12) = \mathbf{37}$
-**Output:** $\begin{bmatrix} 20 & 30 \\\\ 112 & 37 \end{bmatrix}$
+**Output:** 
+
+$$
+\begin{bmatrix} 20 & 30 \\ 112 & 37 \end{bmatrix}
+$$
+
+
 
 ### Q: Calculate CNN Output Size
 **Parameters:** Input $I = 32 \times 32$, Filter $F = 5 \times 5$, Stride $S = 1$, Padding $P = 0$.
@@ -59,7 +65,7 @@ $O = \lfloor \frac{32 - 5 + 2(0)}{1} \rfloor + 1 = 27 + 1 = \mathbf{28 \times 28
 3.  $(2.1 - 2.0)^2 = (0.1)^2 = 0.01$
 $MSE = \frac{0.25 + 0.25 + 0.01}{3} = \frac{0.51}{3} = \mathbf{0.17}$
 
-### Q: Softmax Calculation for vector $z = [1, 2, 3]$
+### Q: Softmax Calculation for vector $$z = $[1, 2, 3]$
 **Formula:** $\sigma(z)_i = \frac{e^{z_i}}{\sum e^{z_j}}$
 **Solution:**
 1.  $e^1 \approx 2.718, e^2 \approx 7.389, e^3 \approx 20.086$
@@ -89,11 +95,11 @@ $$ \begin{bmatrix} 5 & 2 & 1 \\\\ 3 & 10 & 4 \\\\ 1 & 8 & -2 \end{bmatrix} $$
 $Tr(A) = 5 + 10 + (-2) = \mathbf{13}$
 
 ### Q: Chain Rule (Numerical Example)
-**Suppose:** $z = 3x^2$ and $y = \sin(z)$. Find $\frac{dy}{dx}$ at $x = 1$.
+**Suppose:** $$z = $3x^2$ and $y = \sin(z)$. Find $\frac{dy}{dx}$ at $x = 1$.
 **Formula:** $\frac{dy}{dx} = \frac{dy}{dz} \times \frac{dz}{dx}$
 **Solution:**
 1.  $\frac{dz}{dx} = 6x$. At $x=1$, $\frac{dz}{dx} = \mathbf{6}$.
-2.  $\frac{dy}{dz} = \cos(z)$. At $x=1$, $z = 3(1)^2 = 3$. So $\frac{dy}{dz} = \cos(3)$.
+2.  $\frac{dy}{dz} = \cos(z)$. At $x=1$, $$z = $3(1)^2 = 3$. So $\frac{dy}{dz} = \cos(3)$.
 3.  $\frac{dy}{dx} = \cos(3) \times 6 \approx -0.99 \times 6 \approx \mathbf{-5.94}$
 
 ---
@@ -130,35 +136,47 @@ $Tr(A) = 5 + 10 + (-2) = \mathbf{13}$
 *   **MAP (Maximum A Posteriori):** Finds the point estimate of parameters $\theta$ that maximizes the posterior: $\theta_{MAP} = \text{argmax } P(D|\theta)P(\theta)$.
 
 ### Q: Perceptron Update Rule
-**Inputs:** x = [1, 0, 1], **Weights:** w = [0.2, -0.5, 0.4], **Bias:** b = 0.1, **Target:** t = 1, **Learning Rate:** η = 0.5.
-**Step 1: Calculate Net Input (z)**
-z = (1 * 0.2) + (0 * -0.5) + (1 * 0.4) + 0.1 = 0.2 + 0 + 0.4 + 0.1 = **0.7**
+*   **Inputs:** $\mathbf{x} = [1, 0, 1]$
+*   **Weights:** $\mathbf{w} = [0.2, -0.5, 0.4]$
+*   **Bias:** $b = 0.1$, **Target:** $t = 1$, **Learning Rate:** $\eta = 0.5$
+
+**Step 1: Calculate Net Input ($z$)**
+$$ z = (1 \cdot 0.2) + (0 \cdot -0.5) + (1 \cdot 0.4) + 0.1 = 0.2 + 0 + 0.4 + 0.1 = \mathbf{0.7} $$
+
 **Step 2: Activation (Threshold at 0)**
-Since z > 0, Output y_hat = **1**.
+Since $z > 0$, Predicted Output $\hat{y} = \mathbf{1}$.
+
 **Step 3: Update Weights**
-Since y_hat = t, no update is needed (w_new = w_old). If y_hat was 0, then:
-Δw = η(t - y_hat)x = 0.5(1 - 0)[1, 0, 1] = [0.5, 0, 0.5].
+Since $\hat{y} = t$, no update is needed ($\mathbf{w}_{new} = \mathbf{w}_{old}$).
+If $\hat{y}$ was 0, the formula would be:
+$$ \Delta w = \eta(t - \hat{y})\mathbf{x} = 0.5(1 - 0)[1, 0, 1] = [0.5, 0, 0.5] $$
 
 ### Q: Kullback-Leibler (KL) Divergence
-**Given P:** [0.1, 0.9], **Given Q:** [0.5, 0.5]
-**Formula:** D_KL(P||Q) = Σ P(i) log(P(i)/Q(i)) (using log base 2)
+**Given P:** $[0.1, 0.9]$, **Given Q:** $[0.5, 0.5]$
+**Formula:** $D_{KL}(P \| Q) = \sum P(i) \log_2 \frac{P(i)}{Q(i)}$
+
 **Solution:**
-1.  Term 1: 0.1 * log2(0.1 / 0.5) = 0.1 * log2(0.2) = 0.1 * (-2.32) ≈ -0.232
-2.  Term 2: 0.9 * log2(0.9 / 0.5) = 0.9 * log2(1.8) = 0.9 * (0.848) ≈ 0.763
-3.  D_KL = -0.232 + 0.763 = **0.531**
+1.  Term 1: $0.1 \log_2(0.1 / 0.5) = 0.1 \log_2(0.2) \approx 0.1 \cdot (-2.32) \approx -0.232$
+2.  Term 2: $0.9 \log_2(0.9 / 0.5) = 0.9 \log_2(1.8) \approx 0.9 \cdot (0.848) \approx 0.763$
+3.  $D_{KL} = -0.232 + 0.763 = \mathbf{0.531}$
 
 ### Q: AdaGrad Optimization Step
-**Current Weight:** w = 1.0, **Accumulated Square Gradient:** G = 0.1, **Current Gradient:** g = 0.5, **Learning Rate:** η = 0.01.
-**Formula:** w = w - [η / sqrt(G + ε)] * g (Assume ε = 10^-8)
+**Variables:** $w = 1.0, G = 0.1, g = 0.5, \eta = 0.01$.
+**Formula:** $w = w - \frac{\eta}{\sqrt{G + \epsilon}} \cdot g$
+
 **Solution:**
-1.  Update G: G_new = G + g^2 = 0.1 + (0.5)^2 = 0.1 + 0.25 = **0.35**
-2.  Update w: w = 1.0 - [0.01 / sqrt(0.35)] * 0.5 = 1.0 - [0.005 / 0.5916] ≈ 1.0 - 0.00845 = **0.99155**
+1.  **Update G:** $G_{new} = G + g^2 = 0.1 + (0.5)^2 = 0.1 + 0.25 = \mathbf{0.35}$
+2.  **Update w:** $w = 1.0 - \frac{0.01}{\sqrt{0.35}} \cdot 0.5 = 1.0 - \frac{0.005}{0.5916} \approx 1.0 - 0.00845 = \mathbf{0.99155}$
 
 ### Q: Information Gain / Entropy
 **Data:** 4 samples (2 Positive, 2 Negative). **Split:** Feature A splits into [Pos, Pos] and [Neg, Neg].
-**Step 1: Parent Entropy**
-H(S) = -(0.5 * log2(0.5) + 0.5 * log2(0.5)) = -(-0.5 - 0.5) = **1.0**.
+
+**Step 1: Parent Entropy $H(S)$**
+$$ H(S) = -(0.5 \log_2(0.5) + 0.5 \log_2(0.5)) = -(-0.5 - 0.5) = \mathbf{1.0} $$
+
 **Step 2: Child Entropy**
-Both children are pure (H = 0).
-**Step 3: Information Gain**
-IG = 1.0 - (0.5 * 0 + 0.5 * 0) = **1.0** (Perfect split).
+Both children are pure (all Pos or all Neg), so $H(C_1) = 0$ and $H(C_2) = 0$.
+
+**Step 3: Information Gain (IG)**
+$$ IG = H(S) - \sum \frac{|S_i|}{|S|} H(S_i) = 1.0 - (0.5 \cdot 0 + 0.5 \cdot 0) = \mathbf{1.0} $$
+(A perfect split with zero entropy in children results in maximum Information Gain).

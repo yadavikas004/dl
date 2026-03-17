@@ -10,16 +10,32 @@ This document provides high-scoring, detailed model answers for **EVERY** questi
 *   **Identity Matrix ($I$):**
     *   **Definition:** A square matrix in which all the elements of the principal diagonal are ones and all other elements are zeros. 
     *   **Significance:** It acts like the number '1' in matrix algebra. Multiplying any matrix $A$ by $I$ results in $A$ ($A \cdot I = I \cdot A = A$).
-    *   **Example (2x2):** $I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$.
+    *   **Example (2x2):** 
+
+$$
+I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+
+$$ .
 *   **Inverse Matrix ($A^{-1}$):**
     *   **Definition:** For a square matrix $A$, if there exists a matrix $B$ such that $A \cdot B = B \cdot A = I$, then $B$ is the inverse of $A$ ($A^{-1}$).
     *   **Condition:** A matrix has an inverse ONLY if it is square and its determinant is non-zero ($|A| \neq 0$). If $|A|=0$, it is "singular."
     *   **Formula:** $A^{-1} = \frac{1}{|A|} \text{adj}(A)$.
-    *   **Example:** For $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $|A| = (1 \times 4) - (2 \times 3) = -2$. The inverse is $A^{-1} = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}$.
+    *   **Example:** For 
+
+$$
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+$$
+
+, $|A| = (1 \times 4) - (2 \times 3) = -2$. The inverse is 
+
+$$
+A^{-1} = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}
+
+$$ .
 
 ### **b. Write a short note on Norms.**
 *   **Definition:** A norm is a function that maps a vector (or matrix) to a non-negative real value, representing its "size" or magnitude.
-*   **Properties:** A valid norm must satisfy: 1. Non-negativity ($||x|| \ge 0$), 2. Zero vector property ($||x||=0 \iff x=0$), 3. Triangle inequality ($||x+y|| \le ||x|| + ||y||$), and 4. Homogeneity ($||\alpha x|| = |\alpha| \cdot ||x||$).
+*   **Properties:** A valid norm must satisfy: 1. Non-negativity ($\|x\| \ge 0$), 2. Zero vector property ($\|x\|=0 \iff x=0$), 3. Triangle inequality ($\|x+y\| \le \|x\| + \|y\|$), and 4. Homogeneity ($\|\alpha x\| = |\alpha| \cdot \|x\|$).
 *   **Common Norms in DL:**
     1.  **$L^1$ Norm (Manhattan):** Sum of absolute values ($||x||_1 = \sum |x_i|$). Used in Lasso regularization to induce **sparsity**.
     2.  **$L^2$ Norm (Euclidean):** Square root of the sum of squares ($||x||_2 = \sqrt{\sum x_i^2}$). Most common in DL for weight decay (L2 regularization).

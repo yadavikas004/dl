@@ -14,11 +14,21 @@ This is the fully completed document for QP3, including all "OR" options (P and 
 *   **Vector ($\mathbf{x}$):**
     *   **Definition:** A one-dimensional array of numbers. It has both magnitude and direction ($1^{st}$ order tensor).
     *   **Mathematical Notation:** Usually denoted by a lowercase, boldface letter. An $n$-dimensional vector is $\mathbf{x} = [x_1, x_2, ..., x_n]^T \in \mathbb{R}^n$.
-    *   **Example:** $\mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$.
+    *   **Example:** 
+
+$$
+\mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+
+$$ .
 *   **Matrix ($\mathbf{A}$):**
     *   **Definition:** A two-dimensional array of numbers arranged in rows and columns ($2^{nd}$ order tensor).
     *   **Mathematical Notation:** Usually denoted by an uppercase, boldface letter. A matrix with $m$ rows and $n$ columns is $\mathbf{A} \in \mathbb{R}^{m \times n}$.
-    *   **Example:** $\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}$.
+    *   **Example:** 
+
+$$
+\mathbf{A} = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}
+
+$$ .
 
 **Comparison Table:**
 | Feature | Scalar ($x$) | Vector ($\mathbf{x}$) | Matrix ($\mathbf{A}$) |

@@ -149,15 +149,30 @@ We slide the reversed kernel (in deep learning, we usually compute cross-correla
 *   **$L^2$ Norm (Euclidean distance):** $\|v\|_2 = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = \mathbf{5}$.
 
 ### Problem 3: 2x2 Matrix Inverse
-**Question:** Find the Inverse of matrix $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$.
+**Question:** Find the Inverse of matrix 
+
+$$
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+
+$$ .
 **Step-by-step Solution:**
 The formula is $A^{-1} = \frac{1}{|A|} \text{adj}(A)$.
 1.  **Determinant ($|A|$):** $(a \cdot d) - (b \cdot c) = (1 \times 4) - (2 \times 3) = 4 - 6 = \mathbf{-2}$.
     Because $|A| \neq 0$, the inverse exists.
 2.  **Adjugate ($\text{adj} A$):** Swap the main diagonal elements (1 and 4), and negate the off-diagonal elements (2 and 3).
-    $adj(A) = \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix}$.
+    
+
+$$
+adj(A) = \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix}
+
+$$ .
 3.  **Final Inverse:** Multiply the Adjugate by $1/|A|$:
-    $A^{-1} = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \mathbf{\begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}}$.
+    
+
+$$
+A^{-1} = \frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \mathbf{\begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}}
+
+$$ .
 
 ---
 

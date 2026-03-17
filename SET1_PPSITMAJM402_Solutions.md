@@ -18,15 +18,35 @@ This document provides high-scoring, 6-mark level answers for **EVERY** sub-ques
 *   **Matrix ($\mathbf{A}$):** A 2-dimensional array of numbers.
     *   **Property:** Represents a linear transformation. Addition is commutative, but multiplication is **non-commutative** ($\mathbf{AB} \neq \mathbf{BA}$).
     *   **Application:** Represents the weight parameters ($\mathbf{W}$) in a neural network layer.
-    *   **Example:** $\mathbf{A} = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}$.
+    *   **Example:** 
+
+$$
+\mathbf{A} = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}
+
+$$ .
 
 ### **B: Identity and inverse matrices with a calculation example.**
 *   **Identity ($\mathbf{I}$):** A square matrix with 1s on the diagonal and 0s elsewhere. It acts as the multiplicative identity.
 *   **Inverse ($\mathbf{A}^{-1}$):** A matrix such that $\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}$. Only exists for non-singular square matrices ($|A| \neq 0$).
-*   **Example Case:** Let $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$. 
+*   **Example Case:** Let 
+
+$$
+\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+
+$$ . 
     1.  **Determinant ($|A|$):** $(1 \times 4) - (2 \times 3) = -2$. 
-    2.  **Adjugate:** Swap diagonal, negate others $\rightarrow \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix}$.
-    3.  **Inverse:** $\frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}$.
+    2.  **Adjugate:** Swap diagonal, negate others 
+
+$$
+\rightarrow \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix}
+
+$$ .
+    3.  **Inverse:** 
+
+$$
+\frac{1}{-2} \begin{bmatrix} 4 & -2 \\ -3 & 1 \end{bmatrix} = \begin{bmatrix} -2 & 1 \\ 1.5 & -0.5 \end{bmatrix}
+
+$$ .
 
 ### **P: Define Minimum, Maximum, and Saddle point.**
 *   **Local Minimum:** A point where the function value is lower than its immediate neighbors. In deep learning, we seek this to minimize loss.
@@ -55,7 +75,7 @@ This document provides high-scoring, 6-mark level answers for **EVERY** sub-ques
 ### **B: Compare and contrast L2 regularization with L1 regularization.**
 | Feature | L1 (Lasso) | L2 (Ridge) |
 | :--- | :--- | :--- |
-| **Penalty** | Adds sum of absolute weights ($\alpha ||w||_1$) | Adds sum of squared weights ($\alpha ||w||_2^2$) |
+| **Penalty** | Adds sum of absolute weights ($\alpha \|w\|_1$) | Adds sum of squared weights ($\alpha \|w\|_2^2$) |
 | **Weight Effect** | Shrinks coefficients exactly to zero. | Shrinks coefficients towards zero, but never zero. |
 | **Benefit** | Automatically performs **Feature Selection**. | Prevents any single weight from becoming too large. |
 | **Sparsity** | High (Produces Sparse Models) | Low (All weights remain, just smaller) |
