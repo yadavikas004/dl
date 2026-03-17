@@ -27,6 +27,7 @@ This document consolidates all Unit Notes, Question Paper (QP1-QP5) solutions, a
 *   **Definition:** Vectors $v$ whose direction doesn't change when transformed by matrix $A$.
 *   **Equation:** $A v = \lambda v$.
 *   **Role:** Used in PCA for dimensionality reduction and understanding matrix properties.
+*   **PCA vs. SVD:** PCA is a specific application of Eigen-decomposition on the covariance matrix. SVD (Singular Value Decomposition) is a more general factorization $A = UDV^T$ that works for non-square matrices and is more numerically stable than PCA.
 
 **3. Poor Conditioning (QP1, QP2):**
 *   **Definition:** When tiny changes in input cause massive changes in output.
@@ -51,8 +52,8 @@ This document consolidates all Unit Notes, Question Paper (QP1-QP5) solutions, a
 **3. Regularization Techniques (QP1, QP3, QP5):**
 *   **L1 (Lasso):** $\|w\|_1$. Adds sum of absolute weights. Results in **Sparsity**.
 *   **L2 (Weight Decay):** $\|w\|_2^2$. Adds sum of squared weights. Keeps weights small.
-*   **Dropout:** Randomly deactivates neurons ($p=0.5$). Prevents **co-adaptation**.
-*   **Batch Normalization:** Normalizes input to each layer. Speeds up training and stabilizes gradients.
+*   **Dropout:** Randomly deactivates neurons ($p=0.5$). Prevents **co-adaptation** where neurons rely on each other too much.
+*   **Batch Normalization:** Normalizes input to each layer to have zero mean and unit variance. It reduces "Internal Covariate Shift," allows for much higher learning rates, and acts as a strong regularizer, often making Dropout unnecessary.
 
 **4. Hyperparameter Tuning (QP1, QP3):**
 *   **Definition:** Manual selection of parameters *not* learned by the model (e.g., Learning rate, Depth).
@@ -73,7 +74,11 @@ This document consolidates all Unit Notes, Question Paper (QP1-QP5) solutions, a
 
 **3. RNN & Sequence Modeling (QP2, QP3):**
 *   **Computational Unfolding:** Copying the same cell for each step in a sequence.
-*   **LSTM/GRU (QP3):** Solves the vanishing gradient problem using "Gates" to keep long-term memory.
+*   **LSTM/GRU (QP3):** Solves the vanishing gradient problem using "Gates" (Input, Forget, Output) to control the flow of information across long sequences.
+*   **RNN Types:** 
+    *   *One-to-Many:* Image Captioning.
+    *   *Many-to-One:* Sentiment Analysis.
+    *   *Many-to-Many:* Machine Translation.
 *   **Word Embeddings (QP4):** Mapping words to dense vectors (Word2Vec) so similar words (Apple/Orange) are mathematically close.
 
 ---

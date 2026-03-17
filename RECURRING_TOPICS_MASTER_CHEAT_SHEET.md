@@ -8,6 +8,14 @@ I have analyzed all four question papers and identified these "Master Topics" th
 *   **Boltzmann Machine (BM):** An undirected, stochastic (probabilistic) energy-based model. It consists of visible and hidden units. Every node is connected to every other node (extremely hard to train).
 *   **Restricted Boltzmann Machine (RBM):** A "Restricted" version where no two nodes in the same layer are connected. This creates a **Bipartite Graph**. 
 *   **Key Training Algo:** Uses **Gibbs Sampling** or **Contrastive Divergence (CD)**.
+    *   **Gibbs Sampling Steps:** 
+        1. Start with a random visible vector $v^{(0)}$.
+        2. Sample hidden vector $h^{(0)}$ from $P(h|v^{(0)})$.
+        3. Sample new visible vector $v^{(1)}$ from $P(v|h^{(0)})$.
+        4. Repeat for $k$ steps.
+    *   **Contrastive Divergence (CD-k):** An efficient approximation of the gradient. 
+        1. Perform $k$ steps of Gibbs sampling.
+        2. Adjust weights to increase the probability of the original data and decrease the probability of the sampled "fantasy" data.
 *   **Advantages:** Excellent for Feature Learning and Collaborative Filtering (Recommendations).
 *   **Disadvantages:** Hard to scale to high-res images; intractable partition function.
 *   **Types:** Binary RBM, Gaussian RBM (for continuous data).
